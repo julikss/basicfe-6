@@ -14,9 +14,9 @@ const getPeopleInfo = async () => {
             picture: info.picture.large,
             name: info.name,
             cell: info.cell,
-            country: info.location.country,
+            city: info.location.city,
             email: info.email,
-            coordinates: info.location.coordinates
+            phone: info.phone
         }
 
         part += `
@@ -24,9 +24,9 @@ const getPeopleInfo = async () => {
             <img src=${personInfo.picture}>
             <p>Name: ${personInfo.name.first} ${personInfo.name.last}</p>
             <p>Cell: ${personInfo.cell}</p>
-            <p>Country: ${personInfo.country}</p>
+            <p>City: ${personInfo.city}</p>
             <p>Email: ${personInfo.email}</p>
-            <p>Coordinates: ${personInfo.coordinates.latitude}; ${personInfo.coordinates.longitude}</p>
+            <p>Phone: ${personInfo.phone}</p>
         </div>
         `;
     }
